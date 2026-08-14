@@ -96,6 +96,13 @@ pi -e .
 The package intentionally has no runtime npm dependencies. Pi provides its
 extension APIs as peer dependencies.
 
+## Releases
+
+Pushing a `v*` Git tag (or manually running the **Publish to npm** GitHub
+Actions workflow) publishes the version declared in `package.json`. Repository
+maintainers must configure the repository `NPM_TOKEN` Actions secret with an
+npm publish-capable token.
+
 ## License
 
 [MIT](LICENSE)
