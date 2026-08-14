@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "shortcutKey": "enter",
+  "armedWidgetText": "Press Enter again to continue…",
+  "armTimeoutMs": 1500,
+  "continueMessage": "(continue...)",
+  "rewindEmptyTurn": true,
+  "rewindMaxAssistantTokens": 10,
+  "deleteMessageAfterSend": false
+}

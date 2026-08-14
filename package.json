@@ -1,0 +1,38 @@
+{
+  "name": "@ffatty/pi-continue",
+  "version": "1.0.0",
+  "description": "Double-tap Enter to safely continue an interrupted Pi agent turn",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "continue",
+    "double-tap",
+    "agent"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheeseonamonkey/pi-continue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cheeseonamonkey/pi-continue/issues"
+  },
+  "homepage": "https://github.com/cheeseonamonkey/pi-continue#readme",
+  "files": [
+    "extensions/",
+    "double-tap-continue.config.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": ["./extensions"]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
