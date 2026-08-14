@@ -1,5 +1,7 @@
 # pi-continue
 
+[![npm version](https://img.shields.io/npm/v/@ffatty/pi-continue?color=cb3837)](https://www.npmjs.com/package/@ffatty/pi-continue)
+
 A tiny [Pi](https://github.com/earendil-works/pi-coding-agent) extension for
 recovering an interrupted agent turn: with an empty editor and an idle agent,
 double-tap **Enter** to send `"(continue...)"`.
@@ -10,7 +12,7 @@ shortcut; the second press, within the configured window, resumes the agent.
 ## Install
 
 ```bash
-pi install git:github.com/cheeseonamonkey/pi-continue
+pi install npm:@ffatty/pi-continue
 ```
 
 For a checkout under development:
@@ -96,7 +98,10 @@ extension APIs as peer dependencies.
 
 ## Releases
 
-Releases are tracked via Git tags and the source repository.
+Pushing a `v*` Git tag (or manually running the **Publish to npm** GitHub
+Actions workflow) publishes the version declared in `package.json`. Repository
+maintainers must configure the repository `NPM_TOKEN` Actions secret with an
+npm publish-capable token.
 
 ## License
 

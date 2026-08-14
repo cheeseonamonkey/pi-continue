@@ -1,15 +1,29 @@
-name: Publish release
+name: Publish to npm
 
 on:
   push:
     tags:
       - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
 
 jobs:
-  release:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Check out release
         uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          fetch-depth: 0
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - name: Publish
+        run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
